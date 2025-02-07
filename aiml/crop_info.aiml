@@ -1,0 +1,130 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- Category for Banana crop -->
+    <category>
+        <pattern>TELL ME ABOUT BANANA CROP</pattern>
+        <template>
+                <li>Crop Banana is grown mainly in Kharif season.</li>
+                <li>Banana prices for the last 3 years are as follows: 2021 - ₹1200, 2022 - ₹1400, 2023 - ₹1600.</li>
+                <li>Banana requires 1200 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Rice crop -->
+    <category>
+        <pattern>TELL ME ABOUT RICE CROP</pattern>
+        <template>
+                <li>Crop Rice is grown mainly in Kharif season.</li>
+                <li>Rice prices for the last 3 years are as follows: 2021 - ₹1500, 2022 - ₹1700, 2023 - ₹1900.</li>
+                <li>Rice requires 2000 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Wheat crop -->
+    <category>
+        <pattern>TELL ME ABOUT WHEAT CROP</pattern>
+        <template>
+                <li>Crop Wheat is grown mainly in Rabi season.</li>
+                <li>Wheat prices for the last 3 years are as follows: 2021 - ₹2000, 2022 - ₹2200, 2023 - ₹2400.</li>
+                <li>Wheat requires 600 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Corn crop -->
+    <category>
+        <pattern>TELL ME ABOUT CORN CROP</pattern>
+        <template>
+                <li>Crop Corn is grown mainly in Kharif season.</li>
+                <li>Corn prices for the last 3 years are as follows: 2021 - ₹1800, 2022 - ₹2000, 2023 - ₹2200.</li>
+                <li>Corn requires 800 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Cotton crop -->
+    <category>
+        <pattern>TELL ME ABOUT COTTON CROP</pattern>
+        <template>
+                <li>Crop Cotton is grown mainly in Kharif season.</li>
+                <li>Cotton prices for the last 3 years are as follows: 2021 - ₹2500, 2022 - ₹2700, 2023 - ₹2900.</li>
+                <li>Cotton requires 1000 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- General category for any crop -->
+    <category>
+        <pattern>TELL ME ABOUT * CROP</pattern>
+        <template>
+                <li>Crop <star/> is grown mainly in <random><li>Kharif</li><li>Rabi</li><li>Zaid</li></random> season.</li>
+                <li><star/> prices for the last 3 years are as follows: 2021 - ₹<random><li>1000</li><li>1200</li><li>1500</li></random>, 2022 - ₹<random><li>1100</li><li>1300</li><li>1600</li></random>, 2023 - ₹<random><li>1200</li><li>1400</li><li>1700</li></random>.</li>
+                <li><star/> requires <random><li>800 mm</li><li>1000 mm</li><li>1200 mm</li></random> of rainfall.</li>
+        </template>
+    </category>
+    <category>
+        <pattern>TELL ME ABOUT SUGARCANE CROP</pattern>
+        <template>
+                <li>Crop Sugarcane is grown mainly in Kharif season.</li>
+                <li>Sugarcane prices for the last 3 years are as follows: 2021 - ₹2200, 2022 - ₹2400, 2023 - ₹2600.</li>
+                <li>Sugarcane requires 1500 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Barley crop -->
+    <category>
+        <pattern>TELL ME ABOUT APPLE CROP</pattern>
+        <template>
+                <li>location :Jammu and Kashmir</li>
+                <li>Crop Barley is grown mainly in mountain region.</li>
+                <li>APPLE prices for the last 3 years are as follows: 2021 - ₹1800, 2022 - ₹2000, 2023 - ₹2200.</li>
+                <li>APPLE requires 400 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Soybean crop -->
+    <category>
+        <pattern>TELL ME ABOUT SOYBEAN CROP</pattern>
+        <template>
+                <li>Crop Soybean is grown mainly in Kharif season.</li>
+                <li>Soybean prices for the last 3 years are as follows: 2021 - ₹2400, 2022 - ₹2600, 2023 - ₹2800.</li>
+                <li>Soybean requires 800 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Peanuts crop -->
+    <category>
+        <pattern>TELL ME ABOUT PEANUTS CROP</pattern>
+        <template>
+                <li>Crop Peanuts is grown mainly in Kharif season.</li>
+                <li>Peanuts prices for the last 3 years are as follows: 2021 - ₹1500, 2022 - ₹1700, 2023 - ₹1900.</li>
+                <li>Peanuts require 1000 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Sunflower crop -->
+    <category>
+        <pattern>TELL ME ABOUT SUNFLOWER CROP</pattern>
+        <template>
+                <li>Crop Sunflower is grown mainly in Kharif season.</li>
+                <li>Sunflower prices for the last 3 years are as follows: 2021 - ₹2500, 2022 - ₹2700, 2023 - ₹2900.</li>
+                <li>Sunflower requires 700 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- Category for Tomato crop -->
+    <category>
+        <pattern>TELL ME ABOUT TOMATO CROP</pattern>
+        <template>
+                <li>Crop Tomato is grown mainly in Kharif season.</li>
+                <li>Tomato prices for the last 3 years are as follows: 2021 - ₹1000, 2022 - ₹1200, 2023 - ₹1400.</li>
+                <li>Tomato requires 900 mm of rainfall.</li>
+        </template>
+    </category>
+
+    <!-- General category for any crop -->
+    <category>
+        <pattern>TELL ME ABOUT * CROP</pattern>
+        <template>
+                <li>Crop <star/> is grown mainly in <random><li>Kharif</li><li>Rabi</li><li>Zaid</li></random> season.</li>
+                <li><star/> prices for the last 3 years are as follows: 2021 - ₹<random><li>1000</li><li>1200</li><li>1500</li></random>, 2022 - ₹<random><li>1100</li><li>1300</li><li>1600</li></random>, 2023 - ₹<random><li>1200</li><li>1400</li><li>1700</li></random>.</li>
+                <li><star/> requires <random><li>800 mm</li><li>1000 mm</li><li>1200 mm</li></random> of rainfall.</li>
+        </template>
+    </category>
+</aiml>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Crop Prediction</h1>
+    <form id="predictForm">
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district"><br>
+        <label for="soil_type">Soil Type:</label>
+        <input type="text" id="soil_type" name="soil_type"><br>
+        <label for="season">Season:</label>
+        <input type="text" id="season" name="season"><br>
+        <label for="rainfall">Rainfall (mm):</label>
+        <input type="text" id="rainfall" name="rainfall"><br>
+        <button type="submit">Predict</button>
+    </form>
+    <div id="predictionResult"></div>
+
+    <h1>Chat with AI</h1>
+    <form id="chatForm">
+        <label for="message">Ask:</label>
+        <input type="text" id="message" name="message">
+        <button type="button" id="sendButton">Send</button>
+    </form>
+    <div id="chatResult"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Handle prediction form submission
+        $('#predictForm').on('submit', function(e) {
+            e.preventDefault();
+            const district = $('#district').val();
+            const soil_type = $('#soil_type').val();
+            const season = $('#season').val();
+            const rainfall = $('#rainfall').val();
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ district, soil_type, season, rainfall })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    $('#predictionResult').text(`Error: ${data.error}`);
+                } else {
+                    window.location.href = `/result?predicted_crop=${data.predicted_crop}&prices=${JSON.stringify(data.prices)}&soil_type=${data.soil_type}&irrigation=${data.irrigation}&rainfall=${data.rainfall}&image_url=${data.image_url}`;
+                }
+            })
+            .catch(error => {
+                $('#predictionResult').text(`Error: ${error}`);
+            });
+        });
+
+        // Handle chat form submission
+        $('#sendButton').on('click', function() {
+            const message = $('#message').val();
+
+            fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    $('#chatResult').text(`Error: ${data.error}`);
+                } else {
+                    $('#chatResult').append(`<p>${data.response}</p>`);
+                }
+            })
+            .catch(error => {
+                $('#chatResult').text(`Error: ${error}`);
+            });
+        });
+    </script>
+</body>
+</html>

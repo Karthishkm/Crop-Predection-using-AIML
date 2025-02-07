@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <div id="predictionResult">
+        <h3>Predicted Crop: {{ crop_name }}</h3>
+        <p>Prices: 2021: ₹{{ crop.prices['2021'] }}, 2022: ₹{{ crop.prices['2022'] }}, 2023: ₹{{ crop.prices['2023'] }}</p>
+        <p>Soil Type: {{ crop.soil_type }}</p>
+        <p>Irrigation: {{ crop.irrigation }}</p>
+        <p>Rainfall: {{ crop.rainfall }} mm</p>
+        <p>Best Season: {{ crop.season }}</p>
+        <img src="{{ crop.image_url }}" alt="{{ crop_name }}" style="max-width: 200px;">
+    </div>
+    <a href="/">Back to Home</a>
+</body>
+</html>

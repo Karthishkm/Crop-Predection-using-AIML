@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>IRRIGATION</pattern>
+        <template>
+            <condition name="crop">
+                <li value="Rice">Rice requires regular irrigation.</li>
+                <li value="Wheat">Wheat requires moderate irrigation.</li>
+                <li value="Maize">Maize needs frequent irrigation.</li>
+                <li value="Barley">Barley needs minimal irrigation.</li>
+                <li value="Sugarcane">Sugarcane requires extensive irrigation.</li>
+                <li value="Pulses">Pulses require low irrigation.</li>
+                <li value="Cotton">Cotton requires moderate irrigation.</li>
+                <li value="Sorghum">Sorghum needs minimal irrigation.</li>
+                <li value="Groundnut">Groundnut requires moderate irrigation.</li>
+                <li value="Millet">Millet needs low irrigation.</li>
+                <default>Please specify a crop to get irrigation details.</default>
+            </condition>
+        </template>
+    </category>
+    <category>
+        <pattern>SEASON</pattern>
+        <template>
+            <condition name="crop">
+                <li value="Rice">Rice is typically grown in the Kharif season.</li>
+                <li value="Wheat">Wheat is generally grown in the Rabi season.</li>
+                <li value="Maize">Maize is grown in the Kharif season.</li>
+                <li value="Barley">Barley is grown in the Rabi season.</li>
+                <li value="Sugarcane">Sugarcane is grown in both Kharif and Rabi seasons.</li>
+                <li value="Pulses">Pulses are grown in the Rabi season.</li>
+                <li value="Cotton">Cotton is grown in the Kharif season.</li>
+                <li value="Sorghum">Sorghum is grown in the Kharif season.</li>
+                <li value="Groundnut">Groundnut is grown in the Kharif season.</li>
+                <li value="Millet">Millet is grown in the Kharif season.</li>
+                <default>Please specify a crop to get seasonal details.</default>
+            </condition>
+        </template>
+    </category>
+    <!-- Add more AIML categories as needed for rainfall, prices, soil types, etc. -->
+</aiml>
